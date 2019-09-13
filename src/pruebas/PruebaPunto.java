@@ -47,8 +47,6 @@ public class PruebaPunto {
         System.out.println("Punto4 x: "+punto4.getX());
         System.out.println("Punto4 y: "+punto4.getY());
         
-        
-        
     }
     
 }

@@ -51,4 +51,60 @@ public class Punto {
         this.y += canY;
     }
     
+    /*distancia: calcula la distancia euclídea entre un punto y otro que es establecido como parámetro. */
+    // UTILICE LAS FUNCIONES COMO METODOS DE CLASE.
+    //Si los parametros son valores de X e Y de cada punto. 
+    public static double distancia(double x1, double y1, double x2, double y2){
+        return Math.sqrt( (Math.pow(x1-x2,2)) + (Math.pow(y1-y2,2)) );
+    } 
+    
+    //Si los parametros son dos puntos especificos
+    public static double distanciaAlt(Punto p1, Punto p2){
+        return Math.sqrt( (Math.pow(p1.getX()-p2.getX(),2)) + (Math.pow(p1.getY()-p2.getY(),2)) );
+    }
+    
+    /*desplazar (versión sobrecargada): esta operación desplaza el punto una unidad
+    según la dirección establecida como parámetro. */
+    public void desplazarSC(Direccion dir){
+        
+        switch(dir){
+            
+            case ARRIBA:
+                this.y++;
+                break;
+                
+            case ABAJO:
+                this.y--;
+                break;
+                
+            case DERECHA:
+                this.x++;
+                break;
+                
+            case IZQUIERDA:
+                this.x--;
+                break;
+        }
+        
+    }
+    
+    /*mayorDistancia: recibe como parámetro una colección de puntos (argumento
+    variable) y devuelve aquel que esté más alejado del origen de coordenadas. */
+    public Punto mayorDistancia(Punto... puntos){
+        
+        Punto centro = new Punto(0,0);
+        double distMax = 0.0;
+        Punto MasLejos = new Punto();
+        
+        for(Punto p: puntos){
+            if(distanciaAlt(centro,p) > distMax){
+                distMax = distanciaAlt(centro,p);
+                MasLejos = p;
+            }
+        }
+        
+        return MasLejos;
+    }
+    
+    
 }
