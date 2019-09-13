@@ -90,7 +90,7 @@ public class Punto {
     
     /*mayorDistancia: recibe como parámetro una colección de puntos (argumento
     variable) y devuelve aquel que esté más alejado del origen de coordenadas. */
-    public Punto mayorDistancia(Punto... puntos){
+    public static Punto mayorDistancia(Punto... puntos){
         
         Punto centro = new Punto(0,0);
         double distMax = 0.0;

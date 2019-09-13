@@ -19,8 +19,7 @@ public class Circulo {
     /*Tomando como valores por defecto el origen de coordenadas, para el centro, y 5
     para el radio. Los valores por defecto deben definirse como constantes. */
     public Circulo(){
-        this.centro = porDefecto;
-        this.radio = radioPDefecto;
+        this(porDefecto,radioPDefecto);
         this.perimetro = 0.0;
     }
     
