@@ -12,7 +12,7 @@ public class Premio {
         this.cantidad = cantidad;
         this.combinacion = new ArrayList<>(Vcombinacion.length);
         Collections.addAll(this.combinacion,Vcombinacion);
-    }
+    } 
     
     public double getCantidad(){
         return cantidad;

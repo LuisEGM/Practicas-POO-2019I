@@ -60,6 +60,7 @@ public class Maquina {
     public ArrayList<Fruta> jugar(){
         
         ArrayList<Fruta> resultado = null;
+        boolean consola = true;
         
         if(this.credito >= this.precioDeLaJugada){
             
@@ -67,14 +68,21 @@ public class Maquina {
             this.credito -= this.precioDeLaJugada;
             
             //Generar aleatoriamente una combinación de frutas utilizando el método auxiliar (generarCombinacion).
+            
             resultado = generarCombinacion();
             
             for(Premio f:this.premios){
-                if(resultado.equals(f)){
+                if(resultado.equals(f.getCombinacion())){
                     this.credito += f.getCantidad();
+                    System.out.println("»»»»» Gana € "+f.getCantidad()+" «««««");
+                    consola = false;
                 }
             }
             
+        }
+        
+        if(consola){
+            System.out.println("xxxxx Pierde € 0.5 xxxxx");
         }
         
         return resultado;
