@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/pruebas/PruebaTragaPerras.java</file>
-            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/tragaperras/Premio.java</file>
-            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/tragaperras/Fruta.java</file>
-            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/tragaperras/Maquina.java</file>
+            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/dominó/MaindeDepuración.java</file>
+            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/dominó/Jugador.java</file>
+            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/pruebas/JugarDominó.java</file>
+            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/dominó/Ficha.java</file>
+            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/dominó/Partida.java</file>
         </group>
     </open-files>
 </project-private>
