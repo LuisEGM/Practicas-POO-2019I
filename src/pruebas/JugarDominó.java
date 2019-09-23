@@ -47,12 +47,12 @@ public class JugarDominó {
             jugador4.jugar(FichasJugadas);
             if(jugador4.getSinFichas()) break;
             
-            if((jugador1.getPASÓ() == jugador2.getPASÓ() == jugador3.getPASÓ() == jugador4.getPASÓ())==true){
+            if(jugador1.getPASÓ() && jugador2.getPASÓ() && jugador3.getPASÓ() && jugador4.getPASÓ()){
                 PartidaCerrada = true;
             }
             
         }
-         
+        
         // EL ciclo se repetira hasta que la partida se cierre o que alguno de los jugadores no tenga fichas.
         
         //Reviso cual jugador se quedo sin fichas
