@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/bitácora/BitácoraInteligente.java</file>
-            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/bitácora/Bitácora.java</file>
-            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/pruebas/PruebaBitácora.java</file>
-            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/bitácora/Entrada.java</file>
-            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/bitácora/BitácoraUndo.java</file>
+            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/PlazaCochesViajes/Viaje.java</file>
+            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/PlazaCochesViajes/ViajePremium.java</file>
+            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/PlazaCochesViajes/ViajeSelectivo.java</file>
+            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/PlazaCochesViajes/Reserva.java</file>
+            <file>file:/home/luisrg17/NetBeansProjects/Secciones_Practica%20POO/src/pruebas/PruebaReservaciones.java</file>
         </group>
     </open-files>
 </project-private>
