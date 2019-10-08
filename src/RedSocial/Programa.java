@@ -33,10 +33,30 @@ public class Programa {
         //o Añade a la lista de paneles el panel privado y los paneles de suscripción (temas de interés) del perfil.*/
         
         for(Perfil p: perfiles){
-            p.getPanel().publicarMensaje("Hola soy XXX ¡Bienvenidos!","XXX",null);
+            String sms = "Hola soy "+p.getIdentificador()+" ¡Bienvenidos!";
+            p.getPanel().publicarMensaje(sms,p,null);
+            
             paneles.add(p.getPanel());
-            paneles.add(new PanelSuscripcion(p));
+            for(PanelSuscripcion ps: p.getTemasdeInteres().values()){
+                paneles.add(ps);
+            }
+            
         }
+        
+        /*for(Panel p: paneles){
+            
+            //if(p instanceof PanelPrivado) System.out.println("privado");
+            //if(p instanceof PanelSuscripcion) System.out.println("suscripcion");
+            if(p instanceof PanelPrivado){
+                System.out.println(p.getMensajes().size());
+                for(Mensaje m: p.getMensajes()){
+                    
+                    System.out.println(m.toString());
+                }
+                
+            }
+            
+        }*/
         
         /*Recorre la lista de paneles:
         o Si el panel es privado, establece como palabras de seguimiento (palabras clave), “Hola”, “Real Madrid”, “Fútbol”.*/
@@ -67,7 +87,7 @@ public class Programa {
                     if(pa.getPropietario() != per){
                         
                         ((PanelSuscripcion) pa).añadirColaborador(per);
-                        pa.publicarMensaje("Muy interesante");
+                        pa.publicarMensaje("Muy interesante", per,null);
                         
                     }
                     
@@ -85,10 +105,23 @@ public class Programa {
             mensajes publicados tanto en el panel original como en la copia.*/
         
         PanelSuscripcion ps2 = null;
+        PanelPrivado pv2 = null;
         
         for(Panel p: paneles){
             
+            System.out.println("#######################  PANELES DE "+ p.getPropietario().getIdentificador() +"  #######################\n\n");
+            
             System.out.println(p.toString());
+            
+            if(p instanceof PanelPrivado){
+                
+                for(Mensaje m: ((PanelPrivado) p).getMensajes()){
+                    
+                    System.out.println(m.toString());
+                    
+                }
+                
+            }
             
             if(p instanceof PanelSuscripcion){
                 
@@ -97,38 +130,19 @@ public class Programa {
                 for(Mensaje m: p.getMensajes()){
                     System.out.println(m.toString());
                 }
-                System.out.println("/////////////// colaboradores ////////////////\n");
+                System.out.println("//////////////////// colaboradores /////////////////////\n");
                 for(Perfil x: ((PanelSuscripcion) p).getColaboradores()){
                     System.out.println(x.toString());
                 }
                 
             }
-            
+            System.out.println("\n\n");
         }
         
         //La copia no muestra nada
         for(Mensaje m: ps2.mensajes){
             System.out.println(m.toString());
         }
-        
-        
-        /*for(Panel p: paneles){
-            
-            if(p instanceof PanelPrivado){
-                
-                System.out.println("PALABRAS CLAVE");
-                for(String s: ((PanelPrivado) p).getPalabrasClave()){
-                    System.out.println("["+s+"]");
-                }
-                
-                System.out.println("SMS CON SEGUIMIENTO");
-                for(Mensaje m: ((PanelPrivado) p).getMensajesSeguimiento()){
-                    System.out.println(m.toString());
-                }
-                
-            }
-        
-        }*/
         
         
     }

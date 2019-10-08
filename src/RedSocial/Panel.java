@@ -22,12 +22,16 @@ public abstract class Panel implements Cloneable{
         return mensajes;
     }
     
+    public int getNumerodeSms(){
+        return mensajes.size();
+    }
+    
     @Override
     public String toString(){
         
         String retorno = "";
         
-        retorno += "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";            
+        //retorno += "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";            
         retorno += "»» Propietario: "+this.propietario.getIdentificador()+"\n";
         retorno += "»» Numero de SMS: "+this.mensajes.size()+"\n";
         //retorno += "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
@@ -69,10 +73,9 @@ public abstract class Panel implements Cloneable{
     }
     
     
-    public Mensaje publicarMensaje(String texto, String autor, Mensaje smsAlQueResponde){
+    public Mensaje publicarMensaje(String texto, Perfil autor, Mensaje smsAlQueResponde){
         
-        Perfil p = new Perfil(autor);
-        Mensaje m = new Mensaje(texto, p, smsAlQueResponde);
+        Mensaje m = new Mensaje(texto, autor, smsAlQueResponde);
         
         if(esPublicable(m)){
             

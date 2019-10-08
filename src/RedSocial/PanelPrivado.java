@@ -57,6 +57,7 @@ public class PanelPrivado extends Panel implements Cloneable{
         retorno += "******************  Panel Privado  ******************\n\n";        
         retorno += "»» Propietario: "+this.propietario.getIdentificador()+"\n";
         retorno += "»» Numero de SMS: "+this.mensajes.size()+"\n";
+        
         //retorno += "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
         
         return retorno;
@@ -91,13 +92,20 @@ public class PanelPrivado extends Panel implements Cloneable{
     /*------------------   Extensión paneles privados   ---------------------*/
     
     @Override
-    public Mensaje publicarMensaje(String texto, String autor, Mensaje smsAlQueResponde){
+    public Mensaje publicarMensaje(String texto, Perfil autor, Mensaje smsAlQueResponde){
         
-        Perfil p = new Perfil(autor);
-        Mensaje m = new Mensaje(texto, p, smsAlQueResponde);
+        Mensaje m = null;
+        
+        if(smsAlQueResponde != null){
+            m = new Mensaje(texto, autor, smsAlQueResponde);
+        }
+        else{
+            m = new Mensaje(texto, autor);
+        }
+        
         
         if(esPublicable(m)){
-            
+            //System.out.println("se publico");
             for(String s: this.palabrasClave){ // se recorre la lista de palabras clave
                 
                 if(m.getTexto().contains(s)){ //si el texto del sms contiene alguna
