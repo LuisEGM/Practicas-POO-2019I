@@ -4,11 +4,11 @@ import java.time.LocalDate;
 
 public class Elector {
     
-    private final double dni;
+    private final String dni;
     private final String nombre;
     private final LocalDate fechadeNacimiento;
     
-    public Elector(double dni, String nombre, LocalDate fechadeNacimiento){
+    public Elector(String dni, String nombre, LocalDate fechadeNacimiento){
         
         this.dni = dni;
         this.nombre = nombre;
@@ -16,7 +16,7 @@ public class Elector {
         
     }
 
-    public double getDni() {
+    public String getDni() {
         return dni;
     }
 
@@ -33,8 +33,8 @@ public class Elector {
         
         String retorno = "";
         
-        retorno += "»» Nombre: "+this.nombre;
-        retorno += "»» DNI: "+this.dni;
+        retorno += "»» Nombre: "+this.nombre+"\n";
+        retorno += "»» DNI: "+this.dni+"\n";
         retorno += "»» Fecha de nacimiento: "+this.fechadeNacimiento;
         
         return retorno;

@@ -2,5 +2,5 @@ package referendums;
 
 
 public enum Opcion {
-    SI, NO, ENBLANCO;
+    SI, NO, EN_BLANCO;
 }
