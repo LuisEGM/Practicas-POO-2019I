@@ -1,6 +1,8 @@
 package Code;
 
+import java.io.IOException;
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 
 public class Programa {
 
@@ -77,7 +79,46 @@ public class Programa {
             
         }
         
+        System.out.println("\n\n\n *********************** ADICIÓN DE SESEIÓN 11 *********************** ");
+        // (« +S11 »)
         
+        // Cierra los eventos libre y restringido. 
+        for(Evento e: eventos){
+            e.cerrarEvento();
+        }
+        
+        // En el evento libre establece el marcador resultado (5, 0). 
+        Marcador m = new Marcador(5,0);
+        evento1.establecerResultadoDelEvento(m);
+        
+        // En el evento restringido establece el marcador resultado (2, 0). 
+        Marcador m2 = new Marcador(2,0);
+        evento2.establecerResultadoDelEvento(m2);
+        
+        //Recorre la lista de eventos y muestra los usuarios ganadores. 
+        for(Evento e: eventos){
+
+            System.out.println("\n\n»» EVENTO: "+e.getNombreEvento());
+            System.out.println("»>»>» USUARIOS GANADORES «<«<«");
+            System.out.print("»» Felicidades a: ");
+            
+            for(String s: e.usuariosGanadores()){
+                System.out.print(s+" .");
+            }
+            
+        }
+        
+        //Almacena en disco las apuestas del evento restringido utilizando como nombre del fichero “apuestas.txt”. 
+        try{
+            
+            evento1.almacenarApuestasEnDisco("apuestas.txt");
+            evento2.almacenarApuestasEnDisco("apuestas2.txt");
+            
+        }catch(IOException ex){
+            JOptionPane.showMessageDialog(null,"!...Error, ocurrio algun fallo con el archivo");
+        }
+        
+        System.out.println("\n\nPrograma de apuestas finallizado...");
     }
     
 }

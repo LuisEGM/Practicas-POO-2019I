@@ -39,4 +39,13 @@ public class Marcador {
         return true;
     }
     
+    @Override
+    public String toString(){
+        String retorno = "";
+        
+        retorno += " TanteoLocal = "+tanteoLocal+ "  «+» TanteoVisitante = "+tanteoVisitante;
+        
+        return retorno;
+    } 
+    
 }

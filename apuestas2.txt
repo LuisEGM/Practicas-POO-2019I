@@ -1,0 +1,6 @@
+»»»»»»»    APUESTAS    ««««««««
+
+»» Evento: Nadal vs Federer
+» Usuario: Pedro || Apuesta a:  TanteoLocal = 2  «+» TanteoVisitante = 1
+» Usuario: Juan || Apuesta a:  TanteoLocal = 2  «+» TanteoVisitante = 0
+» Usuario: Pepe || Apuesta a:  TanteoLocal = 2  «+» TanteoVisitante = 0
